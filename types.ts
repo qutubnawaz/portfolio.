@@ -1,0 +1,11 @@
+export type Profile={full_name:string;headline:string;intro:string;about:string[];languages?:string[];location:string;tagline:string;photo_url?:string|null;resume_url?:string|null;cv_url?:string|null}
+export type Section={heading:string;body:string}
+export type Metric={label:string;value:string}
+export type Project={id?:string;slug:string;title:string;category:string;summary:string;status?:string;featured?:boolean;tags:string[];tools:string[];metrics:Metric[];sections:Section[];cover_url?:string|null;gallery:string[];sort:number;published?:boolean}
+export type Skill={id?:string;category:string;name:string;learned_from?:string[];sort:number}
+export type Education={id?:string;institution?:string;degree:string;period:string;note?:string;sort:number}
+export type Cert={id?:string;title:string;issuer?:string;year?:string;note?:string;sort:number}
+export type Achievement={id?:string;title:string;description?:string;year?:string;sort:number}
+export type Experience={id?:string;title:string;org?:string;date_label?:string;description?:string;sort:number}
+export type Social={id?:string;label:string;url:string;sort:number}
+export type Content={profile:Profile;projects:Project[];skills:Skill[];education:Education[];certifications:Cert[];achievements:Achievement[];experience:Experience[];social:Social[]}
